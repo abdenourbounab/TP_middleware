@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ac217b2-53ab-4109-9753-a59f551d98b9" name="Changes" comment="adding models (error and database structure)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6ac217b2-53ab-4109-9753-a59f551d98b9" name="Changes" comment="adding repository.go in songs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702914547033</updated>
-      <workItem from="1702914548159" duration="3667000" />
+      <workItem from="1702914548159" duration="3955000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the project">
       <option name="closed" value="true" />
@@ -86,7 +84,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702917126141</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding repository.go">
+      <option name="closed" value="true" />
+      <created>1702935593880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702935593880</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adding repository.go in songs">
+      <option name="closed" value="true" />
+      <created>1702935690650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702935690650</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +121,9 @@
     <MESSAGE value="Creation of the project" />
     <MESSAGE value="setting up the environment" />
     <MESSAGE value="adding models (error and database structure)" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding models (error and database structure)" />
+    <MESSAGE value="adding repository.go" />
+    <MESSAGE value="adding repository.go in songs" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding repository.go in songs" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
