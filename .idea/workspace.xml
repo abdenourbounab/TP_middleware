@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ac217b2-53ab-4109-9753-a59f551d98b9" name="Changes" comment="adding repository.go in songs" />
+    <list default="true" id="6ac217b2-53ab-4109-9753-a59f551d98b9" name="Changes" comment="adding the main in cmd with routes using chi.Router">
+      <change afterPath="$PROJECT_DIR$/API_songs/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702914547033</updated>
-      <workItem from="1702914548159" duration="3955000" />
+      <workItem from="1702914548159" duration="4304000" />
     </task>
     <task id="LOCAL-00001" summary="Creation of the project">
       <option name="closed" value="true" />
@@ -100,7 +103,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702935690650</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding GET functions in service for songs">
+      <option name="closed" value="true" />
+      <created>1702935859262</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1702935859262</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adding GET controllers (context,get_song,get_songs)">
+      <option name="closed" value="true" />
+      <created>1702936001556</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702936001556</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,9 +142,23 @@
     <MESSAGE value="adding models (error and database structure)" />
     <MESSAGE value="adding repository.go" />
     <MESSAGE value="adding repository.go in songs" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding repository.go in songs" />
+    <MESSAGE value="adding GET functions in service for songs" />
+    <MESSAGE value="adding GET controllers (context,get_song,get_songs)" />
+    <MESSAGE value="adding the main in cmd with routes using chi.Router" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding the main in cmd with routes using chi.Router" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/API_songs/cmd/main.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
