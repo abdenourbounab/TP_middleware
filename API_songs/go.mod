@@ -5,6 +5,14 @@ go 1.21.4
 require github.com/swaggo/swag v1.16.2
 
 require (
+	github.com/go-chi/chi/v5 v5.0.10
+	github.com/gofrs/uuid v4.4.0+incompatible
+	github.com/mattn/go-sqlite3 v1.14.19
+	github.com/sirupsen/logrus v1.9.3
+	github.com/swaggo/swag v1.16.2
+)
+
+require (
 	github.com/KyleBanks/depth v1.2.1 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
