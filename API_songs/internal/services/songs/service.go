@@ -10,6 +10,15 @@ import (
 	repository "songs/internal/repositories/songs"
 )
 
+func InsertSong(song models.Songs) error {
+	err := repository.InsertSong(song)
+	if err != nil {
+		logrus.Errorf("Erreur lors de la création du user : %s", err.Error())
+		return err
+	}
+	return nil
+}
+
 func GetAllSongs() ([]models.Songs, error) {
 	var err error
 	// calling repository
