@@ -27,7 +27,7 @@ func init() {
 	schemes := []string{
 		`CREATE TABLE IF NOT EXISTS songs (
 			song_id VARCHAR(255) PRIMARY KEY NOT NULL UNIQUE,
-			album VARCHAR(255) NOT NULL,
+			album VARC HAR(255) NOT NULL,
     		artist VARCHAR(255) NOT NULL,
     		song_name VARCHAR(255) NOT NULL,
     		duration FLOAT NOT NULL,
