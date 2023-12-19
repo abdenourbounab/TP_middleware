@@ -5,7 +5,7 @@ import (
 )
 
 type Songs struct {
-	Song_id   *uuid.UUID `json:"song_id"`
+	id   *uuid.UUID `json:"id"`
 	Album     string     `json:"album"`
 	Artist    string     `json:"artist"`
 	Song_name string     `json:"song_name"`

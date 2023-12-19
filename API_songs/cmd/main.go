@@ -12,13 +12,8 @@ import (
 func main() {
 	r := chi.NewRouter()
 
-	r.Route("/songs", func(r chi.Router) {
-		r.Get("/", songs.GetSongs)
-		r.Route("/{id}", func(r chi.Router) {
-			r.Use(songs.Ctx)
-			r.Get("/", songs.GetSong)
-		})
-	})
+	r.Get("/songs", songs.GetSongs)
+	r.Get("/songs/{id}", songs.GetSong)
 
 	logrus.Info("[INFO] Web server started. Now listening on *:8080")
 	logrus.Fatalln(http.ListenAndServe(":8080", r))
