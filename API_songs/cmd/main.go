@@ -12,6 +12,7 @@ import (
 func main() {
 	r := chi.NewRouter()
 
+	r.Post("/songs", songs.InsertSong)
 	r.Get("/songs", songs.GetSongs)
 	r.Get("/songs/{id}", songs.GetSong)
 
