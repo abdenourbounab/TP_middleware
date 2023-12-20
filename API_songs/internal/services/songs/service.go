@@ -53,3 +53,27 @@ func GetSongById(id uuid.UUID) (*models.Songs, error) {
 
 	return song, err
 }
+
+func UpdateSong(songID uuid.UUID, updatedSong models.Songs) error {
+	song, err := repository.GetSongById(songID)
+	if err != nil {
+		logrus.Errorf("Erreur lors de la récupération du user : %s", err.Error())
+		return err
+	}
+
+	// Mettre à jour les champs nécessaires du commentaire récupéré avec les données du commentaire mis à jour
+	song.Album = updatedSong.Album
+	song.Artist = updatedSong.Artist
+	song.SongName = updatedSong.SongName
+	song.Duration = updatedSong.Duration
+	song.Type = updatedSong.Type
+	song.Playlist = updatedSong.Playlist
+
+	err = repository.UpdateSong(song)
+	if err != nil {
+		logrus.Errorf("Erreur lors de la mise à jour du user en base de données : %s", err.Error())
+		return err
+	}
+
+	return nil
+}
