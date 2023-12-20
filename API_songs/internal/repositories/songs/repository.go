@@ -84,3 +84,20 @@ func UpdateSong(song *models.Songs) error {
 
 	return nil
 }
+
+func DeleteSong(songID uuid.UUID) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		logrus.Errorf("Erreur lors de l'ouverture de la base de données : %s", err.Error())
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	_, err = db.Exec("DELETE FROM songs WHERE id=?", songID)
+	if err != nil {
+		logrus.Errorf("Erreur lors de la suppression du user dans la base de données : %s", err.Error())
+		return err
+	}
+
+	return nil
+}
