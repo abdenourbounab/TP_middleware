@@ -16,6 +16,7 @@ func main() {
 	r.Get("/songs", songs.GetSongs)
 	r.Get("/songs/{id}", songs.GetSong)
 	r.Put("/songs/{id}", songs.UpdateSong)
+	r.Delete("/songs/{id}", songs.DeleteSong)
 
 	logrus.Info("[INFO] Web server started. Now listening on *:8080")
 	logrus.Fatalln(http.ListenAndServe(":8080", r))
