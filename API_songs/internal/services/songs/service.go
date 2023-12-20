@@ -57,7 +57,7 @@ func GetSongById(id uuid.UUID) (*models.Songs, error) {
 func UpdateSong(songID uuid.UUID, updatedSong models.Songs) error {
 	song, err := repository.GetSongById(songID)
 	if err != nil {
-		logrus.Errorf("Erreur lors de la récupération du user : %s", err.Error())
+		logrus.Errorf("Erreur lors de la récupération du song : %s", err.Error())
 		return err
 	}
 
@@ -71,7 +71,17 @@ func UpdateSong(songID uuid.UUID, updatedSong models.Songs) error {
 
 	err = repository.UpdateSong(song)
 	if err != nil {
-		logrus.Errorf("Erreur lors de la mise à jour du user en base de données : %s", err.Error())
+		logrus.Errorf("Erreur lors de la mise à jour du song en base de données : %s", err.Error())
+		return err
+	}
+
+	return nil
+}
+
+func DeleteSong(songID uuid.UUID) error {
+	err := repository.DeleteSong(songID)
+	if err != nil {
+		logrus.Errorf("Erreur lors de la suppression du commentaire : %s", err.Error())
 		return err
 	}
 

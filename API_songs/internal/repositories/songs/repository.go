@@ -18,7 +18,7 @@ func InsertSong(song models.Songs) error {
 	_, err = db.Exec("INSERT INTO songs ( id ,album, artist, song_name, duration, type_song, playlist) VALUES (?, ?, ?, ?, ?, ?, ?)",
 		song.Id, song.Album, song.Artist, song.SongName, song.Duration, song.Type, song.Playlist)
 	if err != nil {
-		logrus.Errorf("Erreur lors de l'insertion du user dans la base de données : %s", err.Error())
+		logrus.Errorf("Erreur lors de l'insertion du song dans la base de données : %s", err.Error())
 		return err
 	}
 
@@ -78,7 +78,7 @@ func UpdateSong(song *models.Songs) error {
 	_, err = db.Exec("UPDATE songs SET album=?, artist=?, song_name=?, duration=?, type_song=?, playlist=? WHERE id=?",
 		song.Id, song.Album, song.Artist, song.SongName, song.Duration, song.Type, song.Playlist)
 	if err != nil {
-		logrus.Errorf("Erreur lors de la mise à jour du user dans la base de données : %s", err.Error())
+		logrus.Errorf("Erreur lors de la mise à jour du song dans la base de données : %s", err.Error())
 		return err
 	}
 
@@ -95,7 +95,7 @@ func DeleteSong(songID uuid.UUID) error {
 
 	_, err = db.Exec("DELETE FROM songs WHERE id=?", songID)
 	if err != nil {
-		logrus.Errorf("Erreur lors de la suppression du user dans la base de données : %s", err.Error())
+		logrus.Errorf("Erreur lors de la suppression du song dans la base de données : %s", err.Error())
 		return err
 	}
 
