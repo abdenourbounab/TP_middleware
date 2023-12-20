@@ -15,6 +15,7 @@ func main() {
 	r.Post("/songs", songs.InsertSong)
 	r.Get("/songs", songs.GetSongs)
 	r.Get("/songs/{id}", songs.GetSong)
+	r.Put("/songs/{id}", songs.UpdateSong)
 
 	logrus.Info("[INFO] Web server started. Now listening on *:8080")
 	logrus.Fatalln(http.ListenAndServe(":8080", r))
