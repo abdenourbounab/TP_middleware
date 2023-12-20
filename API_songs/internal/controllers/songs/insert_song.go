@@ -39,7 +39,7 @@ func InsertSong(w http.ResponseWriter, r *http.Request) {
 
 	err = songs.InsertSong(newSong)
 	if err != nil {
-		logrus.Errorf("Erreur lors de la création du User : %s", err.Error())
+		logrus.Errorf("Erreur lors de la création du song : %s", err.Error())
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
