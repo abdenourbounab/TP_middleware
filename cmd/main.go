@@ -14,6 +14,7 @@ func main() {
 
 	r.Route("/users", func(r chi.Router) {
 		r.Get("/", users.GetUsers)
+
 		r.Route("/{id}", func(r chi.Router) {
 			r.Use(users.Ctx)
 			r.Get("/", users.GetUser)
@@ -33,7 +34,8 @@ func init() {
 		`CREATE TABLE IF NOT EXISTS users (
 			id VARCHAR(255) PRIMARY KEY NOT NULL UNIQUE,
 			name VARCHAR(255) NOT NULL,
-			age INT NOT NULL
+			email VARCHAR(255) NOT NULL,
+			password VARCHAR(255) NOT NULL
 		);`,
 	}
 	for _, scheme := range schemes {
