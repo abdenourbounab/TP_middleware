@@ -45,12 +45,3 @@ func GetUserById(id uuid.UUID) (*models.User, error) {
 
 	return user, err
 }
-
-func CreateUser(user models.User) error {
-	err := repository.CreateUser(user)
-	if err != nil {
-		logrus.Errorf("Error during user creation: %s", err.Error())
-		return err
-	}
-	return nil
-}
