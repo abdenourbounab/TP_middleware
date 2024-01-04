@@ -85,3 +85,21 @@ func DeleteUser(userID uuid.UUID) error {
 
 	return nil
 }
+
+func UpdateUser(user *models.User) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		logrus.Errorf("Error opening the database: %s", err.Error())
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	_, err = db.Exec("UPDATE users SET name=?, email=?, password=? WHERE id=?",
+		user.Name, user.Email, user.Password, user.Id)
+	if err != nil {
+		logrus.Errorf("Error updating the user in the database: %s", err.Error())
+		return err
+	}
+
+	return nil
+}
