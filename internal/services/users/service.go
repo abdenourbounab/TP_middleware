@@ -64,3 +64,24 @@ func DeleteUser(userID uuid.UUID) error {
 
 	return nil
 }
+
+func UpdateUser(userID uuid.UUID, updatedUser models.User) error {
+	user, err := repository.GetUserById(userID)
+	if err != nil {
+		logrus.Errorf("Error retrieving the user: %s", err.Error())
+		return err
+	}
+
+	// Update the necessary fields of the retrieved user with the data from the updated user
+	user.Name = updatedUser.Name
+	user.Email = updatedUser.Email
+	user.Password = updatedUser.Password
+
+	err = repository.UpdateUser(user)
+	if err != nil {
+		logrus.Errorf("Error updating the user in the database: %s", err.Error())
+		return err
+	}
+
+	return nil
+}
