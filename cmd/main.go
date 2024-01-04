@@ -14,7 +14,7 @@ func main() {
 
 	r.Route("/users", func(r chi.Router) {
 		r.Get("/", users.GetUsers)
-
+		r.Post("/", users.InsertUser)
 		r.Route("/{id}", func(r chi.Router) {
 			r.Use(users.Ctx)
 			r.Get("/", users.GetUser)
