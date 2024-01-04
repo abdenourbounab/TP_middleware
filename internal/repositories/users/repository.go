@@ -68,3 +68,20 @@ func CreateUser(user models.User) error {
 
 	return nil
 }
+
+func DeleteUser(userID uuid.UUID) error {
+	db, err := helpers.OpenDB()
+	if err != nil {
+		logrus.Errorf("Error opening the database: %s", err.Error())
+		return err
+	}
+	defer helpers.CloseDB(db)
+
+	_, err = db.Exec("DELETE FROM users WHERE id=?", userID)
+	if err != nil {
+		logrus.Errorf("Error deleting the user from the database: %s", err.Error())
+		return err
+	}
+
+	return nil
+}
