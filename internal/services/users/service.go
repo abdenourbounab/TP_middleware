@@ -54,3 +54,13 @@ func CreateUser(user models.User) error {
 	}
 	return nil
 }
+
+func DeleteUser(userID uuid.UUID) error {
+	err := repository.DeleteUser(userID)
+	if err != nil {
+		logrus.Errorf("Error during user deletion: %s", err.Error())
+		return err
+	}
+
+	return nil
+}
